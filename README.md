@@ -14,7 +14,8 @@ Predict plant-microbe effectors by integrating transcriptomic, metabolomic, and 
 ## Features
 - **Biologically guided attention**: Prioritizes known gene-metabolite interactions.
 - **State-of-the-art performance**: 0.98 F1 score on effector prediction.
-- **Interpretable**: SHAP analysis and attention visualization.
+- **Attention-Priors delta analysis**: Validated existing knowledge and discovered novel, high-impact connections.
+- **Interpretable**: SHAP analysis and attention visualisation.
 
 ## Quick Start
 ```bash
