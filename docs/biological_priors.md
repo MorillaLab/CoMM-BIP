@@ -36,7 +36,7 @@ Learns cross-modal interactions with biological constraints:
 
 **Equation**:
 ```
-\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^\top \cdot \sigma(\text{bio\_scale})}{\sqrt{d}}\right) V
+Attention(Q, K, V) = softmax((QKᵀ * σ(bio_scale)) / √d) V
 ```
 Where `bio_scale` is a learnable parameter initialized to 1.0.
 
