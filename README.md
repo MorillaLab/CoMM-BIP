@@ -203,7 +203,6 @@ If you use CoMM-BIP in your research, please cite:
 }
 ```
 
-> **Note:** The original README had a **MIT license badge** despite the repo being GPL-3.0 — corrected here.
 
 ---
 
