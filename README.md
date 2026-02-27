@@ -201,7 +201,7 @@ If you use CoMM-BIP in your research, please cite:
   publisher = {BMC Genomics},
   doi       = {10.1186/s12864-026-12624-y},
   url       = {https://doi.org/10.1186/s12864-026-12624-y}
-
+}
 
 @misc{vomo_donfack_2025_16281076,
   author    = {Vomo Donfack, Kelly Larissa and
