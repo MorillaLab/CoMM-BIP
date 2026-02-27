@@ -188,6 +188,21 @@ Data used in this study are available via the Zenodo deposit linked above. For a
 If you use CoMM-BIP in your research, please cite:
 
 ```bibtex
+@article{
+  author    = {Vomo Donfack, Kelly Larissa and
+               León Morcillo, Rafael Jorge and
+               Gintor, Grégory and
+               González Doblas, Verónica and
+               Morilla, Ian},
+  title     = {Multimodal Learning Reveals Plants' Hidden
+               Sensory Integration Logic},
+  month     = feb,
+  year      = 2026,
+  publisher = {BMC Genomics},
+  doi       = {10.1186/s12864-026-12624-y},
+  url       = {https://doi.org/10.1186/s12864-026-12624-y}
+
+
 @misc{vomo_donfack_2025_16281076,
   author    = {Vomo Donfack, Kelly Larissa and
                González Doblas, Verónica and
