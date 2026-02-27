@@ -1,0 +1,239 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#120a00;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a1000;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#f97316;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="accent2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="modglow1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0.02"/>
+    </linearGradient>
+    <linearGradient id="modglow2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#22d3ee;stop-opacity:0.02"/>
+    </linearGradient>
+    <linearGradient id="modglow3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:0.02"/>
+    </linearGradient>
+    <filter id="bigblur"><feGaussianBlur stdDeviation="30"/></filter>
+    <filter id="softblur"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#bg)"/>
+
+  <!-- Ambient glow pools -->
+  <ellipse cx="200" cy="420" rx="350" ry="220" fill="#f59e0b" opacity="0.06" filter="url(#bigblur)"/>
+  <ellipse cx="1060" cy="250" rx="300" ry="220" fill="#22d3ee" opacity="0.05" filter="url(#bigblur)"/>
+  <ellipse cx="750" cy="580" rx="250" ry="120" fill="#ec4899" opacity="0.04" filter="url(#bigblur)"/>
+
+  <!-- ============================================================ -->
+  <!-- RIGHT PANEL: Multimodal network diagram                      -->
+  <!-- Three modality nodes → shared attention core → output        -->
+  <!-- ============================================================ -->
+
+  <!-- Connection lines (drawn first, behind nodes) -->
+  <!-- Transcriptomics → core -->
+  <line x1="870" y1="160" x2="1020" y2="280" stroke="#f59e0b" stroke-width="1.8" stroke-opacity="0.35"/>
+  <!-- Metabolomics → core -->
+  <line x1="870" y1="310" x2="1020" y2="300" stroke="#22d3ee" stroke-width="1.8" stroke-opacity="0.35"/>
+  <!-- Phenomics → core -->
+  <line x1="870" y1="460" x2="1020" y2="325" stroke="#ec4899" stroke-width="1.8" stroke-opacity="0.35"/>
+  <!-- Core → output -->
+  <line x1="1110" y1="305" x2="1185" y2="280" stroke="#f59e0b" stroke-width="1.5" stroke-opacity="0.4"/>
+  <line x1="1110" y1="305" x2="1185" y2="305" stroke="#fbbf24" stroke-width="1.5" stroke-opacity="0.3"/>
+  <line x1="1110" y1="305" x2="1185" y2="330" stroke="#f97316" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- Bio prior dashed ring around core -->
+  <circle cx="1065" cy="305" r="72" fill="none" stroke="#f59e0b"
+          stroke-width="1.2" stroke-dasharray="6,4" stroke-opacity="0.3"/>
+
+  <!-- Modality node 1: Transcriptomics (amber) -->
+  <circle cx="870" cy="160" r="52" fill="url(#modglow1)" stroke="#f59e0b" stroke-width="1.5" stroke-opacity="0.7" filter="url(#glow)"/>
+  <text x="870" y="153" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600"
+        fill="#fbbf24" text-anchor="middle">Transcrip-</text>
+  <text x="870" y="170" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600"
+        fill="#fbbf24" text-anchor="middle">tomics</text>
+  <!-- Mini bar chart inside -->
+  <rect x="845" y="178" width="5" height="18" rx="1" fill="#f59e0b" opacity="0.5"/>
+  <rect x="854" y="173" width="5" height="23" rx="1" fill="#f59e0b" opacity="0.7"/>
+  <rect x="863" y="180" width="5" height="16" rx="1" fill="#f59e0b" opacity="0.5"/>
+  <rect x="872" y="175" width="5" height="21" rx="1" fill="#fbbf24" opacity="0.8"/>
+  <rect x="881" y="182" width="5" height="14" rx="1" fill="#f59e0b" opacity="0.5"/>
+  <rect x="890" y="177" width="5" height="19" rx="1" fill="#f59e0b" opacity="0.6"/>
+
+  <!-- Modality node 2: Metabolomics (cyan) -->
+  <circle cx="870" cy="310" r="52" fill="url(#modglow2)" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.7" filter="url(#glow)"/>
+  <text x="870" y="303" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600"
+        fill="#67e8f9" text-anchor="middle">Metabolo-</text>
+  <text x="870" y="320" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600"
+        fill="#67e8f9" text-anchor="middle">mics</text>
+  <!-- Mini scatter plot inside -->
+  <circle cx="849" cy="332" r="3" fill="#22d3ee" opacity="0.6"/>
+  <circle cx="860" cy="327" r="2.5" fill="#67e8f9" opacity="0.7"/>
+  <circle cx="870" cy="335" r="3" fill="#22d3ee" opacity="0.6"/>
+  <circle cx="881" cy="328" r="2.5" fill="#67e8f9" opacity="0.8"/>
+  <circle cx="891" cy="334" r="3" fill="#22d3ee" opacity="0.6"/>
+  <circle cx="855" cy="337" r="2" fill="#22d3ee" opacity="0.5"/>
+  <circle cx="876" cy="337" r="2" fill="#67e8f9" opacity="0.5"/>
+
+  <!-- Modality node 3: Phenomics (pink) -->
+  <circle cx="870" cy="460" r="52" fill="url(#modglow3)" stroke="#ec4899" stroke-width="1.5" stroke-opacity="0.7" filter="url(#glow)"/>
+  <text x="870" y="453" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600"
+        fill="#f9a8d4" text-anchor="middle">Pheno-</text>
+  <text x="870" y="470" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600"
+        fill="#f9a8d4" text-anchor="middle">mics</text>
+  <!-- Mini leaf/plant icon -->
+  <path d="M 860 483 Q 868 475 876 483 Q 870 493 860 483 Z" fill="#ec4899" opacity="0.5"/>
+  <path d="M 862 486 Q 870 492 870 498" stroke="#f9a8d4" stroke-width="1" fill="none" opacity="0.5"/>
+
+  <!-- Core attention node -->
+  <circle cx="1065" cy="305" r="48" fill="#1a0f00" stroke="#f97316"
+          stroke-width="2" stroke-opacity="0.8" filter="url(#glow)"/>
+  <text x="1065" y="295" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700"
+        fill="#fb923c" text-anchor="middle">Bio-Guided</text>
+  <text x="1065" y="311" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700"
+        fill="#fb923c" text-anchor="middle">Attention</text>
+  <text x="1065" y="327" font-family="'Segoe UI', sans-serif" font-size="10"
+        fill="#78350f" text-anchor="middle">+ Priors</text>
+
+  <!-- Output labels -->
+  <text x="1192" y="283" font-family="'Segoe UI', sans-serif" font-size="12"
+        fill="#fbbf24" opacity="0.85">F1=0.98</text>
+  <text x="1192" y="308" font-family="'Segoe UI', sans-serif" font-size="12"
+        fill="#f9a8d4" opacity="0.8">SHAP</text>
+  <text x="1192" y="333" font-family="'Segoe UI', sans-serif" font-size="12"
+        fill="#67e8f9" opacity="0.8">Δ-map</text>
+
+  <!-- Bio prior label -->
+  <text x="1065" y="375" font-family="'Segoe UI', sans-serif" font-size="11"
+        fill="#92400e" text-anchor="middle" opacity="0.8">biological prior</text>
+
+  <!-- Panel label -->
+  <text x="1065" y="520" font-family="'Segoe UI', sans-serif" font-size="12"
+        fill="#4b3a1a" text-anchor="middle" opacity="0.7">multimodal integration</text>
+
+  <!-- ============================================================ -->
+  <!-- LEFT PANEL: text content                                     -->
+  <!-- ============================================================ -->
+
+  <!-- Vertical accent bar -->
+  <rect x="62" y="88" width="5" height="195" rx="3" fill="url(#accent)"/>
+
+  <!-- Title -->
+  <text x="88" y="155" font-family="'Segoe UI', system-ui, -apple-system, sans-serif"
+        font-size="82" font-weight="800" fill="white" letter-spacing="-2">CoMM-BIP</text>
+
+  <!-- Subtitle line 1 -->
+  <text x="90" y="196" font-family="'Segoe UI', system-ui, sans-serif"
+        font-size="19" fill="#fbbf24" letter-spacing="0.2">
+    Contrastive Multimodal Model
+  </text>
+  <!-- Subtitle line 2 -->
+  <text x="90" y="220" font-family="'Segoe UI', system-ui, sans-serif"
+        font-size="16" fill="#6b7280">
+    with Biologically Informed Priors for Plant Effector Prediction
+  </text>
+
+  <!-- Divider -->
+  <rect x="88" y="240" width="500" height="2" rx="1" fill="url(#accent)"/>
+
+  <!-- Stat boxes -->
+  <!-- F1 -->
+  <rect x="88" y="258" width="130" height="80" rx="10"
+        fill="#ffffff" fill-opacity="0.03" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.6"/>
+  <text x="153" y="298" font-family="'Segoe UI', system-ui, sans-serif"
+        font-size="30" font-weight="800" fill="#fbbf24" text-anchor="middle">0.98</text>
+  <text x="153" y="325" font-family="'Segoe UI', system-ui, sans-serif"
+        font-size="12" fill="#6b7280" text-anchor="middle">F1 Score</text>
+
+  <!-- Modalities -->
+  <rect x="232" y="258" width="130" height="80" rx="10"
+        fill="#ffffff" fill-opacity="0.03" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="297" y="295" font-family="'Segoe UI', system-ui, sans-serif"
+        font-size="26" font-weight="700" fill="#67e8f9" text-anchor="middle">3</text>
+  <text x="297" y="314" font-family="'Segoe UI', system-ui, sans-serif"
+        font-size="12" fill="#6b7280" text-anchor="middle">modalities</text>
+  <text x="297" y="330" font-family="'Segoe UI', system-ui, sans-serif"
+        font-size="10" fill="#4b5563" text-anchor="middle">T + M + P</text>
+
+  <!-- Interpretable -->
+  <rect x="376" y="258" width="130" height="80" rx="10"
+        fill="#ffffff" fill-opacity="0.03" stroke="#ec4899" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="441" y="292" font-family="'Segoe UI', system-ui, sans-serif"
+        font-size="16" font-weight="700" fill="#f9a8d4" text-anchor="middle">SHAP</text>
+  <text x="441" y="310" font-family="'Segoe UI', system-ui, sans-serif"
+        font-size="12" fill="#f9a8d4" text-anchor="middle">+ Attention</text>
+  <text x="441" y="328" font-family="'Segoe UI', system-ui, sans-serif"
+        font-size="11" fill="#6b7280" text-anchor="middle">XAI</text>
+
+  <!-- Zenodo -->
+  <rect x="520" y="258" width="130" height="80" rx="10"
+        fill="#ffffff" fill-opacity="0.03" stroke="#f97316" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="585" y="292" font-family="'Segoe UI', system-ui, sans-serif"
+        font-size="16" font-weight="700" fill="#fb923c" text-anchor="middle">Zenodo</text>
+  <text x="585" y="310" font-family="'Segoe UI', system-ui, sans-serif"
+        font-size="12" fill="#6b7280" text-anchor="middle">2025</text>
+  <text x="585" y="328" font-family="'Segoe UI', system-ui, sans-serif"
+        font-size="11" fill="#6b7280" text-anchor="middle">v1.0</text>
+
+  <!-- Tag pills -->
+  <g font-family="'Segoe UI', system-ui, sans-serif" font-size="13">
+    <rect x="88" y="362" width="155" height="28" rx="14"
+          fill="#f59e0b" fill-opacity="0.10" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="165" y="381" fill="#fbbf24" text-anchor="middle">🌱 Plant Biology</text>
+
+    <rect x="254" y="362" width="160" height="28" rx="14"
+          fill="#22d3ee" fill-opacity="0.10" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="334" y="381" fill="#67e8f9" text-anchor="middle">🧠 Multimodal ML</text>
+
+    <rect x="425" y="362" width="145" height="28" rx="14"
+          fill="#ec4899" fill-opacity="0.10" stroke="#ec4899" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="497" y="381" fill="#f9a8d4" text-anchor="middle">🔬 Bio Priors</text>
+
+    <rect x="581" y="362" width="120" height="28" rx="14"
+          fill="#f97316" fill-opacity="0.10" stroke="#f97316" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="641" y="381" fill="#fb923c" text-anchor="middle">💡 Explainable</text>
+  </g>
+
+  <!-- Quick install snippet -->
+  <rect x="88" y="413" width="420" height="48" rx="8"
+        fill="#0d0800" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.35"/>
+  <text x="104" y="431" font-family="'Courier New', monospace" font-size="12" fill="#78350f">$</text>
+  <text x="120" y="431" font-family="'Courier New', monospace" font-size="13" fill="#fb923c">git clone</text>
+  <text x="207" y="431" font-family="'Courier New', monospace" font-size="13" fill="#fbbf24">MorillaLab/CoMM-BIP</text>
+  <text x="104" y="452" font-family="'Courier New', monospace" font-size="13" fill="#fb923c">python</text>
+  <text x="168" y="452" font-family="'Courier New', monospace" font-size="13" fill="#fbbf24">src/train.py --data_dir ./data</text>
+
+  <!-- Δ analysis highlight box -->
+  <rect x="88" y="482" width="380" height="42" rx="8"
+        fill="#1a0f00" stroke="#f97316" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="104" y="498" font-family="'Segoe UI', sans-serif" font-size="12"
+        fill="#fb923c" font-weight="600">✨ Attention-Priors Δ analysis</text>
+  <text x="104" y="516" font-family="'Segoe UI', sans-serif" font-size="12" fill="#78350f">
+    validates known &amp; discovers novel gene–metabolite connections
+  </text>
+
+  <!-- Bottom label -->
+  <text x="88" y="565" font-family="'Segoe UI', system-ui, sans-serif"
+        font-size="14" fill="#374151">
+    MorillaLab · Zenodo, 2025 · GPL-3.0
+  </text>
+  <text x="88" y="585" font-family="'Segoe UI', system-ui, sans-serif"
+        font-size="13" fill="#374151">
+    Vomo Donfack · González Doblas · Morilla
+  </text>
+</svg>

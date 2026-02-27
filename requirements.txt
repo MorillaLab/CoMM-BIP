@@ -1,9 +1,38 @@
-torch==2.0.1
-pytorch-lightning==2.0.0
+# Deep learning
+torch>=1.12.0
+torchvision>=0.13.0
+
+# Multimodal / contrastive learning utilities
+einops>=0.6.0           # Tensor rearrangement for attention layers
+
+# Interpretability
+shap>=0.41.0
+captum>=0.6.0           # PyTorch model interpretability
+
+# Core scientific stack
 numpy>=1.21.0
 pandas>=1.3.0
+scipy>=1.7.0
 scikit-learn>=1.0.0
+
+# Graph / network (biological priors)
+networkx>=2.8.0         # Gene-metabolite interaction graph
+
+# Omics data handling
+anndata>=0.9.0          # Transcriptomics / single-cell data
+scanpy>=1.9.0           # RNA-seq processing
+
+# Visualization
+matplotlib>=3.4.0
 seaborn>=0.11.0
-matplotlib>=3.5.0
-pytorch-metric-learning==1.7.0
-tqdm>=4.0.0
+plotly>=5.0.0
+
+# Notebooks
+jupyter>=1.0.0
+ipykernel>=6.0.0
+ipywidgets>=7.6.0
+
+# Utilities
+tqdm>=4.62.0
+pyyaml>=6.0
+joblib>=1.1.0
