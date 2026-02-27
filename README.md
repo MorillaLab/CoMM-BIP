@@ -188,7 +188,7 @@ Data used in this study are available via the Zenodo deposit linked above. For a
 If you use CoMM-BIP in your research, please cite:
 
 ```bibtex
-@article{
+@article{vomo_donfack_2026_12624-y
   author    = {Vomo Donfack, Kelly Larissa and
                León Morcillo, Rafael Jorge and
                Gintor, Grégory and
