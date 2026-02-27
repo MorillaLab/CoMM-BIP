@@ -62,22 +62,22 @@ Metabolomic Data ─────┤         │
 Phenomic Data ────────┘   Cross-Modal Attention
                                │
                     ┌──────────▼──────────┐
-                    │  Biological Prior    │
+                    │  Biological Prior   │
                     │  (gene–metabolite   │
-                    │   interaction graph) │
+                    │   interaction graph)│
                     └──────────┬──────────┘
                                │
                     Biologically-Weighted
                     Attention Output
                                │
                     ┌──────────▼──────────┐
-                    │  Contrastive Loss +  │
-                    │  Classification Head │
+                    │  Contrastive Loss + │
+                    │  Classification Head│
                     └──────────┬──────────┘
                                │
                     ┌──────────▼──────────┐
-                    │  SHAP Explainability │
-                    │  + Attention Δ Map   │
+                    │  SHAP Explainability│
+                    │  + Attention Δ Map  │
                     └─────────────────────┘
 ```
 
